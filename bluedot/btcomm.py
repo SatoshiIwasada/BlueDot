@@ -484,7 +484,8 @@ class BluetoothServer:
         elif bt_error.errno == errno.ETIMEDOUT:
             self.disconnect_client()
         else:
-            raise bt_error
+            print("Unknown Error")
+            self.disconnect_client()
 
 
 class BluetoothClient():
